@@ -6,8 +6,11 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public int playerSpeed;
-    private Vector2 movement;
+    public GameObject bulletPrefab;
+    private Vector3 offSet;
     Rigidbody2D rb;
+    private float time;
+    
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
@@ -16,12 +19,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxis("Horizontal");
-        
-        
+        float inputx = Input.GetAxis("Horizontal");
+        transform.Translate(inputx * playerSpeed * Time.deltaTime, 0f, 0f);
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(bulletPrefab,transform.position+offSet,Quaternion.identity);
+            
+        }
+        if(time>3.0f)
+        {
+            Destroy(bulletPrefab);
+        }
+
     }
-    private void FixedUpdate()
-    {
-        rb.MovePosition(rb.position+movement*playerSpeed*Time.fixedDeltaTime);
-    }
+   
+
 }
