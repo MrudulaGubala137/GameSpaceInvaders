@@ -22,6 +22,7 @@ public class BulletMovement : MonoBehaviour
         if(collision.gameObject.tag =="Enemy")
         {
             Destroy (collision.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }

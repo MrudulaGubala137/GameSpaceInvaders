@@ -21,7 +21,11 @@ public class PlayerMovement : MonoBehaviour
     {
         float inputx = Input.GetAxis("Horizontal");
         transform.Translate(inputx * playerSpeed * Time.deltaTime, 0f, 0f);
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (transform.position.x < -8.0f)
+            transform.position = new Vector2(-8.0f, transform.position.y);
+        if (transform.position.x > 8.0f)
+            transform.position = new Vector2(8.0f, transform.position.y);
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(bulletPrefab,transform.position+offSet,Quaternion.identity);
             
