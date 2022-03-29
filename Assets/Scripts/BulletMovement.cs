@@ -9,7 +9,7 @@ public class BulletMovement : MonoBehaviour
    ScoreManager scoreManager;
     void Start()
     {
-        
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     }
 
     // Update is called once per frame
@@ -22,6 +22,7 @@ public class BulletMovement : MonoBehaviour
     {
         if(collision.gameObject.tag =="Enemy")
         {
+            scoreManager.Score(10);
             Destroy (collision.gameObject);
             Destroy(this.gameObject);
         }

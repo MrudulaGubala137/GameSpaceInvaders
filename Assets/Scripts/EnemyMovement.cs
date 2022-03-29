@@ -21,23 +21,6 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /* if (transform.position.x > -8f && transform.position.x < 8f)
-             {
-            transform.Translate(Vector2.right * 2f * Time.deltaTime);
-         }
-
-
-             if (transform.position.x <-8f ) 
-         {
-             transform.position = new Vector2( transform.position.x,transform.position.y - 1f);
-             transform.Translate(Vector2.right * 2f * Time.deltaTime);
-         }
-         if (transform.position.x > 8f)
-         {
-             transform.position = new Vector2(transform.position.x, transform.position.y - 1f);
-             transform.Translate(Vector2.left * 2f * Time.deltaTime);
-         }*/
-        
 
         if (flag == false)
         {
@@ -78,10 +61,9 @@ public class EnemyMovement : MonoBehaviour
                 flag = false;
             }
         }
-       
+        //if(enemySpawner==null)
         
-
-
+       
 
     }
 }
