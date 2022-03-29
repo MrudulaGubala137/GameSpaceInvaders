@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 offSet;
     Rigidbody2D rb;
     private float time;
+   public  int health = 30;
     
     void Start()
     {
@@ -36,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+    
    
 
 }

@@ -6,6 +6,7 @@ public class BulletMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public int bulletSpeed;
+   ScoreManager scoreManager;
     void Start()
     {
         
@@ -25,4 +26,5 @@ public class BulletMovement : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+   
 }

@@ -8,7 +8,8 @@ public class EnemySpawnAndMovement : MonoBehaviour
     public float time;
     public GameObject[] enemyPrefab;
     int i;
-
+    float bulletTime;
+   
     void Start()
     {
         while (i < 5)
@@ -21,9 +22,10 @@ public class EnemySpawnAndMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
 
-      
-      
-      
+
+
+
     }
 }
