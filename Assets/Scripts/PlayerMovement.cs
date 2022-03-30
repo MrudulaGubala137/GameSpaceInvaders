@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
    public  int health = 30;
     public GameObject gameOverPanel;
     public Text winOrlostText;
-    public Text playerHealth;
+    
     ScoreManager scoreManager;
 
     void Start()
@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if(scoreManager.health<=0)
         {
-           playerHealth.text= (scoreManager.health.ToString());
+          
             Destroy(this.gameObject);
              gameOverPanel.SetActive(true);
             winOrlostText.text = "You Lost";

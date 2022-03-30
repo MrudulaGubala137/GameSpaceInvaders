@@ -9,7 +9,8 @@ public class ScoreManager : MonoBehaviour
     PlayerMovement player;
     public int score;
     public Text scoreText;
-      public void Score(int value)
+    public Text playerHealth;
+    public void Score(int value)
     {
         score=score+value;
         scoreText.text = "Score:" + score;
@@ -17,7 +18,7 @@ public class ScoreManager : MonoBehaviour
     public void PlayerHealth(int healthDec)
     {
         health = health - healthDec;
-        
+        playerHealth.text = "Health: "+ health;
         Debug.Log(health);
     }
 }
